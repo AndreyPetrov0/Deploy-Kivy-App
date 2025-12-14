@@ -124,7 +124,7 @@ Builder.load_string("""
            
 
 <MenuButton@Button>:
-    font_name: 'Montserrat-Medium.ttf'
+#    font_name: 'Montserrat-Medium.ttf'
     font_size: '70px'
     background_color: (0, 0, 0, 0)
     background_normal: ''
@@ -222,7 +222,7 @@ Builder.load_string("""
             size: '420px', '1730px'
             
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+     #           font_name: 'Montserrat-BoldItalic.ttf'
                 text: 'Введіть значення на яке буде скоригований прилад'
                 color: (1, 1, 1, 1)
                 font_size: '19sp'
@@ -243,7 +243,7 @@ Builder.load_string("""
             size: '731px', '2070px'
             
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+         #       font_name: 'Montserrat-BoldItalic.ttf'
                 text: 'мм'
                 color: (215, 55, 72, 1)
                 font_size: '22sp'
@@ -279,7 +279,7 @@ Builder.load_string("""
                 size: '100px', '100px'
             
             TextInput:
-                font_name: 'Montserrat-Bold.ttf'
+         #       font_name: 'Montserrat-Bold.ttf'
                 id: value
                 multiline: False
                 readonly: True
@@ -454,7 +454,7 @@ Builder.load_string("""
                 
 
 <ModNumberBotton@Button>:
-    font_name: 'Montserrat-Bold.ttf'
+ #   font_name: 'Montserrat-Bold.ttf'
     size_hint: None, None
     size: '250px', '140px'
     font_size: '60px'
@@ -490,7 +490,7 @@ Builder.load_string("""
             
 
 <ENTER@Button>:
-    font_name: 'Montserrat-Medium.ttf'
+#    font_name: 'Montserrat-Medium.ttf'
     background_color: (0, 0, 0, 0)
     background_normal: ''
     back_color: (.25, .40, .82, 1) 
@@ -503,7 +503,7 @@ Builder.load_string("""
             radius: [0, 40, 40, 0]
 
 <BACK@Button>:
-    font_name: 'Montserrat-Medium.ttf'
+#    font_name: 'Montserrat-Medium.ttf'
     background_color: (0, 0, 0, 0)
     background_normal: ''
     back_color: (.25, .40, .82, 1) 
@@ -600,7 +600,7 @@ Builder.load_string("""
             size: '420px', '1730px'
             
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+      #          font_name: 'Montserrat-BoldItalic.ttf'
                 text: 'Введіть значення на дисплею датчика в пункті 2.6.1'
                 color: (1, 1, 1, 1)
                 font_size: '19sp'
@@ -621,7 +621,7 @@ Builder.load_string("""
             size: '731px', '2070px'
             
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+        #        font_name: 'Montserrat-BoldItalic.ttf'
                 text: ''
                 color: (215, 55, 72, 1)
                 font_size: '22sp'
@@ -650,7 +650,7 @@ Builder.load_string("""
             size: '550px', '3950px'
 
             TextInput:
-                font_name: 'Montserrat-Bold.ttf'
+       #         font_name: 'Montserrat-Bold.ttf'
                 id: value
                 multiline: False
                 readonly: True
@@ -881,7 +881,7 @@ Builder.load_string("""
             size: '420px', '190px'
             
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+       #         font_name: 'Montserrat-BoldItalic.ttf'
                 text: 'Результат розрахунку введіть у датчик'
                 color: (1, 1, 1, 1)
                 font_size: '20sp'
@@ -965,7 +965,7 @@ Builder.load_string("""
             spacing: '80px'
             
             Button:
-                font_name: 'Montserrat-Medium.ttf'
+      #          font_name: 'Montserrat-Medium.ttf'
                 text: 'Розрахувати'
                 font_size: '55px'
                 on_press: root.calculation()
@@ -986,7 +986,7 @@ Builder.load_string("""
             
             
             Button:
-                font_name: 'Montserrat-Medium.ttf'
+            #    font_name: 'Montserrat-Medium.ttf'
                 text: 'Шкала приладу'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}

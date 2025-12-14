@@ -71,7 +71,7 @@ Builder.load_string("""
             size: '900px', '3000px'
            
             Label:
-                font_name: 'Montserrat-BoldItalic.ttf'
+           #     font_name: 'Montserrat-BoldItalic.ttf'
                 text: 'Шкала приладу'
                 font_size: '85px'
                 size_hint: None, None

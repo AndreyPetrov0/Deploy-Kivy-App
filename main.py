@@ -6,13 +6,7 @@ from kivy.core.text import LabelBase
 
 from kivy.properties import StringProperty
 
-# --‐-------- прозрачная панель
-from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.button import Button
-from kivy.uix.label import Label
-from kivy.utils import platform
-# ----------'
+
 
 Builder.load_string("""
 
@@ -1152,33 +1146,10 @@ LabelBase.register(name="CustomFontName",
 
 
 
-def hide_status_bar():
-    # функция для прозрачной панели снизу и сверху
-    if platform == 'android':
-        from jnius import autoclass, cast
-        from android.runnable import run_on_ui_thread
-        
-        Color = autoclass("android.graphics.Color")
-        WindowManager = autoclass('android.view.WindowManager$LayoutParams')
-        activity = autoclass('org.kivy.android.PythonActivity').mActivity
-
-
-        @run_on_ui_thread
-        def _hide_status_bar(color):
-            window = activity.getWindow()
-            window.clearFlags(WindowManager.FLAG_TRANSLUCENT_STATUS)
-            window.addFlags(WindowManager.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.setStatusBarColor(Color.parseColor(color)) 
-            window.setNavigationBarColor(Color.parseColor(color))
-
-        _hide_status_bar('#000000ff')
-
 
 class Level_SpotterApp(App):
     #Main class
     def build(self):
-        hide_status_bar() # запуск функции для скрытия панели
-        
         al = AnchorLayout()
         
         sm = ScreenManager(transition=FadeTransition(duration='0.1'))

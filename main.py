@@ -25,10 +25,10 @@ Builder.load_string("""
             size_hint: None, None
             size: '2000px', '4500px'  
             
-            Image:
-                source: 'metal-2.jpg'
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                size_hint: '2000px', '4500px'
+         #   Image:
+              #  source: 'metal-2.jpg'
+          #      pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+           #     size_hint: '2000px', '4500px'
         
         BoxLayout:
         # layout для бордера кнопак шкалы
@@ -176,10 +176,10 @@ Builder.load_string("""
             size_hint: None, None
             size: '2000px', '4500px'  
             
-            Image:
-                source: 'metal-2.jpg'
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                size_hint: '2000px', '4500px'
+         #   Image:
+           #     source: 'metal-2.jpg'
+            #    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            #    size_hint: '2000px', '4500px'
      
 
         # Слой картинки для надписи
@@ -555,10 +555,10 @@ Builder.load_string("""
             size_hint: None, None
             size: '2000px', '4500px'  
             
-            Image:
-                source: 'metal-2.jpg'
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                size_hint: '2000px', '4500px'
+         #   Image:
+          #      source: 'metal-2.jpg'
+          #      pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+          #      size_hint: '2000px', '4500px'
 
         
         # Слой картинки для надписи
@@ -815,10 +815,10 @@ Builder.load_string("""
             size_hint: None, None
             size: '2000px', '4500px'  
             
-            Image:
-                source: 'metal-2.jpg'
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                size_hint: '2000px', '4500px'
+       #     Image:
+       #         source: 'metal-2.jpg'
+         #       pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        #        size_hint: '2000px', '4500px'
         
         BoxLayout:
             orientation: 'vertical'

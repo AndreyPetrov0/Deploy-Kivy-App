@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.lang import Builder
-from kivy.core.text import LabelBase    # для шрифта ttf
+from kivy.core.text import LabelBase    # для шрифта .ttf
 
 from kivy.properties import StringProperty   # для переключения стрелки
 

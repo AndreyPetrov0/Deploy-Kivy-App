@@ -1168,9 +1168,9 @@ def hide_status_bar():
 
         _hide_status_bar('#000000ff')
 
-LabelBase.register(name='Mon_Bold', fn_regular='Montserrat-Bold.ttf')
-LabelBase.register(name='Mon_BoldItalic', fn_regular='Montserrat-BoldItalic.ttf')
-LabelBase.register(name='Mon_Medium', fn_regular='Montserrat-Medium.ttf')
+LabelBase.register(name='Mon_Bold', fn_regular='fonts/Montserrat-Bold.ttf')
+LabelBase.register(name='Mon_BoldItalic', fn_regular='fonts/Montserrat-BoldItalic.ttf')
+LabelBase.register(name='Mon_Medium', fn_regular='fonts/Montserrat-Medium.ttf')
 
 
 class Level_SpotterApp(App):

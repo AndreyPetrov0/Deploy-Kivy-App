@@ -1,3 +1,4 @@
+# ПАНЕЛЬ НАВИГАЦИИ СЕРОГО ЦВЕТА
 from kivy.app import App
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition

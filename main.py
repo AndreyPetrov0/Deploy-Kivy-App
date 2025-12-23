@@ -1198,8 +1198,7 @@ LabelBase.register(name='Mon_Medium', fn_regular='fonts/Montserrat-Medium.ttf')
 class Level_SpotterApp(App):
     #Main class
     def build(self):
-		
-		if platform == 'android':
+        if platform == 'android':
             self.enable_android_bars()
         
         hide_status_bar() # запуск функции для скрытия панели
@@ -1234,7 +1233,7 @@ class Level_SpotterApp(App):
             decor_view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE)
 
         show_bars()
-
+    
     def on_start(self):
         # Проверяем, что мы на Android, прежде чем вызывать метод
         if platform == 'android':

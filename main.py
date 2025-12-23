@@ -1228,12 +1228,6 @@ class Level_SpotterApp(App):
             Color = autoclass('android.graphics.Color')
             LayoutParams = autoclass('android.view.WindowManager$LayoutParams')
 
-			# Сбрасываем флаги полноэкранного режима, 
-            # чтобы показать системные бары (Status bar и Navigation bar)
-            window = PythonActivity.mActivity.getWindow()
-            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE)
-            
-
             # Установка флагов прозрачности
             Window.addFlags(LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             Window.clearFlags(LayoutParams.FLAG_TRANSLUCENT_STATUS)

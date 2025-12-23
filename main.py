@@ -1198,6 +1198,7 @@ LabelBase.register(name='Mon_Medium', fn_regular='fonts/Montserrat-Medium.ttf')
 class Level_SpotterApp(App):
     #Main class
     def build(self):
+		
 		if platform == 'android':
             self.enable_android_bars()
         

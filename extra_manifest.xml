@@ -1,0 +1,5 @@
+<activity android:name="org.kivy.android.PythonActivity"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:configChanges="orientation|keyboardHidden|keyboard|screenSize|inputMethod"
+    android:launchMode="singleTask">
+</activity>

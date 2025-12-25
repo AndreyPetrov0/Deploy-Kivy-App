@@ -81,7 +81,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-#android.presplash_color = #FFFFFF
+android.presplash_color = #000000
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
@@ -158,7 +158,7 @@ android.api = 31
 #android.service_class_name = org.kivy.android.PythonService
 
 # (str) Android app theme, default is ok for Kivy-based app
-# android.apptheme = "@android:style/Theme.NoTitleBar"
+# android.apptheme = "@style/MySplashTheme"
 
 # (list) Pattern to whitelist for the whole project
 #android.whitelist =
@@ -177,7 +177,7 @@ android.api = 31
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
-#android.add_src =
+#android.add_src = res
 
 # (list) Android AAR archives to add
 #android.add_aars =

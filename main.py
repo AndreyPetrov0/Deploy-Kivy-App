@@ -1216,10 +1216,10 @@ class Level_SpotterApp(App):
         # Проверяем, что мы на Android, прежде чем вызывать метод
         if platform == 'android':
             self.make_status_bar_transparent()
-
-	        from android.runnable import run_on_ui_thread
+			
+			from android.runnable import run_on_ui_thread
             
-            @run_on_ui_thread
+			@run_on_ui_thread
             def restore_ui():
                 from jnius import autoclass
                 PythonActivity = autoclass('org.kivy.android.PythonActivity')

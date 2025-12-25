@@ -74,7 +74,7 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = 1
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -158,7 +158,7 @@ android.api = 31
 #android.service_class_name = org.kivy.android.PythonService
 
 # (str) Android app theme, default is ok for Kivy-based app
-# android.apptheme = "@android:style/Theme.NoTitleBar"
+# android.apptheme = "@style/FullscreenTheme"
 
 # (list) Pattern to whitelist for the whole project
 #android.whitelist =
@@ -177,7 +177,7 @@ android.api = 31
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
-#android.add_src =
+#android.add_src = res
 
 # (list) Android AAR archives to add
 #android.add_aars =

@@ -1217,6 +1217,22 @@ class Level_SpotterApp(App):
         if platform == 'android':
             self.make_status_bar_transparent()
 
+	        from android.runnable import run_on_ui_thread
+            
+            @run_on_ui_thread
+            def restore_ui():
+                from jnius import autoclass
+                PythonActivity = autoclass('org.kivy.android.PythonActivity')
+                window = PythonActivity.mActivity.getWindow()
+                View = autoclass('android.view.View')
+                
+                # Сбрасываем флаги полноэкранности темы
+                window.getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_VISIBLE
+                )
+            
+            restore_ui()
+
     # ВАЖНО: Этот метод должен быть внутри класса MyApp с тем же отступом, что и build
     def make_status_bar_transparent(self):
         try:

@@ -158,7 +158,7 @@ android.api = 31
 #android.service_class_name = org.kivy.android.PythonService
 
 # (str) Android app theme, default is ok for Kivy-based app
- android.apptheme = "@style/MySplashTheme"
+# android.apptheme = "@style/MySplashTheme"
 
 # (list) Pattern to whitelist for the whole project
 #android.whitelist =

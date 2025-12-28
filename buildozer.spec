@@ -81,7 +81,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = #000000
+#android.presplash_color = #FFFFFF
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
@@ -141,15 +141,13 @@ android.api = 31
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
 
-android.entrypoint_theme = @style/MySplashTheme
-
 # (str) Full name including package path of the Java class that implements Android Activity
 # use that parameter together with android.entrypoint to set custom Java class instead of PythonActivity
 #android.activity_class_name = org.kivy.android.PythonActivity
 
 # (str) Extra xml to write directly inside the <manifest> element of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML code
-#android.extra_manifest_xml = extra_manifest.xml
+#android.extra_manifest_xml = ./src/android/extra_manifest.xml
 
 # (str) Extra xml to write directly inside the <manifest><application> tag of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML arguments:
@@ -179,7 +177,7 @@ android.entrypoint_theme = @style/MySplashTheme
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
-android.add_src = res
+#android.add_src =
 
 # (list) Android AAR archives to add
 #android.add_aars =
@@ -239,8 +237,6 @@ android.add_src = res
 
 # (str) XML file to include as an intent filters in <activity> tag
 #android.manifest.intent_filters =
-
-android.manifest.attributes = android:theme="@style/MySplashTheme"
 
 # (list) Copy these files to src/main/res/xml/ (used for example with intent-filters)
 #android.res_xml = PATH_TO_FILE,

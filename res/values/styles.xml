@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Основная тема для этапа загрузки -->
     <style name="MySplashTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
-        <!-- Цвет фона самого окна (обычно совпадает с цветом пресплеша) -->
         <item name="android:windowBackground">@android:color/black</item>
-        
-        <!-- ЦВЕТ ПАНЕЛИ НАВИГАЦИИ (Navigation Bar) -->
-        <item name="android:navigationBarColor">#000000</item> 
-        
-        <!-- ЦВЕТ СТАТУС-БАРА (Status Bar) -->
+        <item name="android:navigationBarColor">#000000</item>
         <item name="android:statusBarColor">#000000</item>
-        
-        <!-- Для Android 12+ (Splash Screen API) -->
-        <item name="android:windowSplashScreenBackground">#000000</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 </resources>

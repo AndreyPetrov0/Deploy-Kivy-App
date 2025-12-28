@@ -140,6 +140,7 @@ android.api = 31
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
+
 android.entrypoint_theme = @style/MySplashTheme
 
 # (str) Full name including package path of the Java class that implements Android Activity

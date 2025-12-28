@@ -239,7 +239,8 @@ android.add_src = res
 
 # (str) XML file to include as an intent filters in <activity> tag
 #android.manifest.intent_filters =
-#android.manifest.attributes = android:theme="@style/MySplashTheme"
+
+android.manifest.attributes = android:theme="@style/MySplashTheme"
 
 # (list) Copy these files to src/main/res/xml/ (used for example with intent-filters)
 #android.res_xml = PATH_TO_FILE,

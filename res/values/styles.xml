@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MySplashTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+    <!-- Основная тема приложения -->
+    <style name="MySplashTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <!-- 1. Цвет фона окна загрузки -->
         <item name="android:windowBackground">@android:color/black</item>
+        
+        <!-- 2. Черный цвет для панелей (API 21+) -->
         <item name="android:navigationBarColor">#000000</item>
         <item name="android:statusBarColor">#000000</item>
+        
+        <!-- 3. Важно для Android 12-15: настройка Splash Screen API -->
+        <item name="android:windowSplashScreenBackground">#000000</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 </resources>

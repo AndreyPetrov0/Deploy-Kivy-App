@@ -140,7 +140,7 @@ android.api = 31
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.kivy.android.PythonActivity
-#android.entrypoint_theme = @style/MySplashTheme
+android.entrypoint_theme = @style/MySplashTheme
 
 # (str) Full name including package path of the Java class that implements Android Activity
 # use that parameter together with android.entrypoint to set custom Java class instead of PythonActivity
@@ -237,8 +237,8 @@ android.api = 31
 #android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
 
 # (str) XML file to include as an intent filters in <activity> tag
-android.manifest.intent_filters =
-android.manifest.attributes = android:theme="@style/MySplashTheme"
+#android.manifest.intent_filters =
+#android.manifest.attributes = android:theme="@style/MySplashTheme"
 
 # (list) Copy these files to src/main/res/xml/ (used for example with intent-filters)
 #android.res_xml = PATH_TO_FILE,

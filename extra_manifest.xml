@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="schemas.android.com">
+    <application>
+        <activity android:name="org.kivy.android.PythonActivity"
+            android:theme="@style/MySplashTheme">
+        </activity>
+    </application>
+</manifest>

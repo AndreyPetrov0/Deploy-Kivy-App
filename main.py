@@ -1209,11 +1209,9 @@ class Level_SpotterApp(App):
         return al
         
     def on_start(self):
-        # Проверяем, что мы на Android, прежде чем вызывать метод
         if platform == 'android':
             self.make_status_bar_transparent()
 
-    # ВАЖНО: Этот метод должен быть внутри класса MyApp с тем же отступом, что и build
     def make_status_bar_transparent(self):
         try:
             from jnius import autoclass
@@ -1231,7 +1229,6 @@ class Level_SpotterApp(App):
             Window.setNavigationBarColor(Color.TRANSPARENT)
 
             decorView = Window.getDecorView()
-            # Флаги для предотвращения прыжка: LAYOUT_STABLE помогает зафиксировать размер
             decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
                 View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |

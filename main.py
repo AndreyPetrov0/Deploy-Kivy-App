@@ -34,7 +34,7 @@ Builder.load_string("""
             size: '2000px', '4500px'  
             
             Image:
-                source: 'metal-2.jpg'
+                source: 'metal.jpg'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 size_hint: '2000px', '4500px'
         
@@ -185,7 +185,7 @@ Builder.load_string("""
             size: '2000px', '4500px'  
             
             Image:
-                source: 'metal-2.jpg'
+                source: 'metal.jpg'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 size_hint: '2000px', '4500px'
      
@@ -563,7 +563,7 @@ Builder.load_string("""
             size: '2000px', '4500px'  
             
             Image:
-                source: 'metal-2.jpg'
+                source: 'metal.jpg'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 size_hint: '2000px', '4500px'
 
@@ -823,7 +823,7 @@ Builder.load_string("""
             size: '2000px', '4500px'  
             
             Image:
-                source: 'metal-2.jpg'
+                source: 'metal.jpg'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 size_hint: '2000px', '4500px'
         
@@ -834,7 +834,7 @@ Builder.load_string("""
             spacing: '100px'
             
             Image:
-                source: 'Last.png'
+                source: 'device_display.png'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 size_hint: None, None
                 size: '650px', '650px'       
@@ -1032,20 +1032,16 @@ class MenuScaleScreen(Screen):
 
 class CorrectionScreen(Screen):
 
-    #-------------------
-    # Определите свойство для картинки, чтобы оно могло меняться через KV
-    image_source = StringProperty('D_1.png') 
+    image_source = StringProperty('transparent_back.png') 
 
     def change_image(self):
-        # Логика смены картинки
         if len(self.value_correct.text) != 0:
             if self.value_correct.text[0] == '+':
-                self.image_source = 'Up.png'      
+                self.image_source = 'up_arrow.png'      
             else:
-                self.image_source = 'Down.png'
+                self.image_source = 'down_arrow.png'
         else:
-            self.image_source = 'D_1.png'
-    #-------------------
+            self.image_source = 'transparent_back.png'
 
     max_len = 3
     def enter_correct(self):

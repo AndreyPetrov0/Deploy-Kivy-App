@@ -324,6 +324,7 @@ Builder.load_string("""
                 text: 'Назад'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+				on_press: root.restart_image()
                 on_press: root.manager.current = 'MenuScaleScreen'
                 size_hint: None, None
                 size: '350px', '140px'
@@ -332,6 +333,7 @@ Builder.load_string("""
                 text: 'Прийняти'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+				on_press: root.restart_image()
                 on_press: root.enter_correct()
                 on_press: root.manager.current = 'NumberScreen'
                 size_hint: None, None
@@ -1042,6 +1044,9 @@ class CorrectionScreen(Screen):
                 self.image_source = 'down_arrow.png'
         else:
             self.image_source = 'transparent_back.png'
+
+    def restart_image(self):
+        self.image_source = StringProperty('transparent_back.png')
 
     max_len = 3
     def enter_correct(self):

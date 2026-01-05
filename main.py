@@ -1047,7 +1047,6 @@ class CorrectionScreen(Screen):
 
     def restart_image(self):
         self.image_source = 'transparent_back.png'
-		self.correct_input.text = ''
 
     max_len = 3
     def enter_correct(self):

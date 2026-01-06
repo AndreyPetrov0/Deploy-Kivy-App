@@ -1034,7 +1034,7 @@ class MenuScaleScreen(Screen):
 class CorrectionScreen(Screen):
 
     image_source = StringProperty('transparent_back.png') 
-    value = cache['correct_value']
+ #   value = cache['correct_value']
     def change_image(self):
         if len(self.value_correct.text) != 0:
             if self.value_correct.text[0] == '+':

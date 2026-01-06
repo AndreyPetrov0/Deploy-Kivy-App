@@ -324,8 +324,7 @@ Builder.load_string("""
                 text: 'Назад'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-				on_press: root.restart_image()
-				on_press: root.back_correct()
+                on_press: root.back_correct()
                 on_press: root.manager.current = 'MenuScaleScreen'
                 size_hint: None, None
                 size: '350px', '140px'
@@ -334,7 +333,6 @@ Builder.load_string("""
                 text: 'Прийняти'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-				on_press: root.restart_image()
                 on_press: root.enter_correct()
                 on_press: root.manager.current = 'NumberScreen'
                 size_hint: None, None
@@ -699,7 +697,6 @@ Builder.load_string("""
                 text: 'Назад'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-				on_press: root.back_number()
                 on_press: root.manager.current = 'CorrectionScreen'
                 size_hint: None, None
                 size: '350px', '140px'
@@ -897,7 +894,7 @@ Builder.load_string("""
                 size_hint: (None, None)
                 size: (400, 200)
                 
-	AnchorLayout:
+    AnchorLayout:
         anchor_x: 'center'
         anchor_y: 'top'
         pos_hint: {'center_x': 0.5, 'center_y': 0.5} 
@@ -919,7 +916,7 @@ Builder.load_string("""
                 size: '310px', '420px'
                
                 
-	AnchorLayout:
+    AnchorLayout:
         anchor_x: 'center'
         anchor_y: 'top'
         pos_hint: {'center_x': 0.5, 'center_y': 0.5} 
@@ -1037,7 +1034,7 @@ class MenuScaleScreen(Screen):
 class CorrectionScreen(Screen):
 
     image_source = StringProperty('transparent_back.png') 
-
+    value = cache['correct_value']
     def change_image(self):
         if len(self.value_correct.text) != 0:
             if self.value_correct.text[0] == '+':
@@ -1047,21 +1044,19 @@ class CorrectionScreen(Screen):
         else:
             self.image_source = 'transparent_back.png'
 
-    def restart_image(self):
+        
+    def back_correct(self):
+        print('Useing back_correct')
+        self.correct_input.text = ''
         self.image_source = 'transparent_back.png'
+        cache['correct_value'] = 0
 
-	def back_correct(self):
-		cache['correct_value'] = 0
-		
     max_len = 3
     def enter_correct(self):
         try:
             cache['correct_value'] = int(self.correct_input.text)
         except:
             cache['correct_value'] = 0
-        finally:
-            self.correct_input.text = ''
-            self.max_len = 3
 
     def on_button_press(self, number):
         if number == '-':
@@ -1109,9 +1104,6 @@ class CorrectionScreen(Screen):
  
            
 class NumberScreen(Screen):
-    def back_number(self):
-		cache['number_value'] = 0
-	
     def enter_number(self):
         try:
             cache['number_value'] = int(self.number_input.text)

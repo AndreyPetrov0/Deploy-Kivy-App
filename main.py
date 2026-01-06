@@ -1046,7 +1046,6 @@ class CorrectionScreen(Screen):
 
         
     def back_correct(self):
-        print('Useing back_correct')
         self.correct_input.text = ''
         self.image_source = 'transparent_back.png'
         cache['correct_value'] = 0

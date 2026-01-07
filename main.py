@@ -387,62 +387,61 @@ Builder.load_string("""
                 text: '1'
                 on_press: root.change_image()
                 on_press: root.on_button_press('1')
-                on_press: root.change_image()
 
             ModNumberBotton:
                 text: '2'
                 on_press: root.change_image()
                 on_press: root.on_button_press('2')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '3'
                 on_press: root.change_image()
                 on_press: root.on_button_press('3')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '4'
                 on_press: root.change_image()
                 on_press: root.on_button_press('4')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '5'
                 on_press: root.change_image()
                 on_press: root.on_button_press('5')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '6'
                 on_press: root.change_image()
                 on_press: root.on_button_press('6')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '7'
                 on_press: root.change_image()
                 on_press: root.on_button_press('7')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '8'
                 on_press: root.change_image()
                 on_press: root.on_button_press('8')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '9'
                 on_press: root.change_image()
                 on_press: root.on_button_press('9')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 font_size: '90px'
                 text: '-'
                 on_press: root.change_image()
                 on_press: root.on_button_press('-')
-                on_press: root.change_image()
+                
 
             ModNumberBotton:
                 text: '0'
@@ -453,7 +452,6 @@ Builder.load_string("""
                 text: '<'
                 on_press: root.change_image()
                 on_press: root.on_button_press('<')
-                on_press: root.change_image()
                 
 
 <ModNumberBotton@Button>:
@@ -697,6 +695,7 @@ Builder.load_string("""
                 text: 'Назад'
                 font_size: '50px'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                on_press: root.back_number()
                 on_press: root.manager.current = 'CorrectionScreen'
                 size_hint: None, None
                 size: '350px', '140px'
@@ -1032,9 +1031,8 @@ class MenuScaleScreen(Screen):
        
 
 class CorrectionScreen(Screen):
-
+    
     image_source = StringProperty('transparent_back.png') 
- #   value = cache['correct_value']
     def change_image(self):
         if len(self.value_correct.text) != 0:
             if self.value_correct.text[0] == '+':
@@ -1043,7 +1041,6 @@ class CorrectionScreen(Screen):
                 self.image_source = 'down_arrow.png'
         else:
             self.image_source = 'transparent_back.png'
-
         
     def back_correct(self):
         self.image_source = 'transparent_back.png'
@@ -1106,6 +1103,10 @@ class CorrectionScreen(Screen):
  
            
 class NumberScreen(Screen):
+
+    def back_number(self):
+        self.number_input.text = ''
+        
     def enter_number(self):
         try:
             cache['number_value'] = int(self.number_input.text)

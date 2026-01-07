@@ -1046,16 +1046,19 @@ class CorrectionScreen(Screen):
 
         
     def back_correct(self):
-        self.correct_input.text = ''
         self.image_source = 'transparent_back.png'
-        cache['correct_value'] = 0
-
+        self.correct_input.text = ''
+        
     max_len = 3
     def enter_correct(self):
         try:
             cache['correct_value'] = int(self.correct_input.text)
         except:
             cache['correct_value'] = 0
+        finally:
+            self.correct_input.text = ''
+            self.max_len = 3
+            self.image_source = 'transparent_back.png'
 
     def on_button_press(self, number):
         if number == '-':
